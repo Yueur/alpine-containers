@@ -8,5 +8,6 @@ This was ment for a light-weight server (Raspberry Pi).
 | Folder name | What it contains | Depends on |
 | ----------: | :--------------- | :--------- |
 | alpine      | Base image       |            |
+| samba       | Samba share      | alpine     |
 
 
