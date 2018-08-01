@@ -11,5 +11,6 @@ This was ment for a light-weight server (Raspberry Pi).
 | samba       | Samba share      | alpine     |
 | nginx       | Nginx service    | alpine     |
 | apache      | Apache server    | alpine     |
+| apache-php  | PHP server       | apache     |
 
 
