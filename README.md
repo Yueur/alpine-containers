@@ -10,5 +10,6 @@ This was ment for a light-weight server (Raspberry Pi).
 | alpine      | Base image       |            |
 | samba       | Samba share      | alpine     |
 | nginx       | Nginx service    | alpine     |
+| apache      | Apache server    | alpine     |
 
 
