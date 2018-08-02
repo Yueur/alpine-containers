@@ -6,6 +6,9 @@ This was ment for a light-weight server (Raspberry Pi).
 
 I'm recreating some existing images since i'm not working in a x86_64 environement but mainly for arm processor.
 
+By default use the x86_64 image.
+On Raspberry PI use armhf (**not yet tested !**)
+There is other base images you can find [here](https://alpinelinux.org/downloads/)
 
 ## Uses
 Here is a list all repos i'm using as is.
