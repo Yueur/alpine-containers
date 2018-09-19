@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  default:
+    build:
+      context: .
+      dockerfile: notebook.dockerfile
+    image: localhost:5000/notebook
+    restart: unless-stopped
+    ports:
+    - '8889:8888'
+    volumes:
+    - '/srv/docker/notebook-default/:/srv/notebook/'
+    
+  custom:
+    build:
+      context: .
+      dockerfile: notebook-custom.dockerfile
+    image: localhost:5000/notebook-custom
+    restart: unless-stopped
+    ports:
+    - '8888:8888'
+    volumes:
+    - '/srv/docker/notebook-datascience/:/srv/notebook/'
+

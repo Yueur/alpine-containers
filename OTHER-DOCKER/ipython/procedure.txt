@@ -1,0 +1,18 @@
+-- On change la fin
+DELIMITER $$
+
+CREATE PROCEDURE inserer_multicast(IN `p_place` INT, IN `p_nom` VARCHAR(100), IN `p_description` VARCHAR(100), IN `p_protocole` VARCHAR(100), IN `p_adresse` VARCHAR(100), IN `p_port` INT)
+BEGIN
+insert into Support(id, type) values (NULL, 'Media');
+
+set @_id = last_insert_id();
+
+
+insert into Media(id, type, place, nom, description) values (@_id, 'Multicast', p_place, p_nom, p_description);
+
+insert into Multicast(id, protocol, adresse, port) values (@_id, p_protocole, p_adresse, p_port);
+
+END$$
+
+-- On remet la fin par default
+DELIMITER ;
