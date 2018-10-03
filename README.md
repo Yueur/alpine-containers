@@ -36,6 +36,7 @@ Usually it means there is a pull request...
 | ----------: | :--------------- | :--------- |
 | alpine      | Base image       |            |
 | samba       | Samba share      | alpine     |
+| doxygen     | Doc generator    | alpine     |
 | nginx       | Nginx service    | alpine     |
 | apache      | Apache server    | alpine     |
 | apache-php  | PHP server       | apache     |
