@@ -1,0 +1,18 @@
+FROM 127.0.0.1:5000/alpine:3.8.0
+
+# Install DHCP server
+RUN apk update && \
+	apk upgrade && \
+	apk add kea-dhcp4 && \
+	rm -rf /var/cache/apk/* && \
+	cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.old
+
+# Configure
+
+
+# DHCP is on port 67 as UDP
+#EXPOSE 67/tcp
+EXPOSE 67/udp 
+
+#CMD ["/usr/sbin/dhcpd", "-d"]
+
