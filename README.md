@@ -1,5 +1,7 @@
 # Alpine container's repo
 
+**GOING TO RENAME THIS REPO TO `Docker-container`**
+
 This is my "Docker" repo for everything using alpine.
 
 This was ment for a light-weight server (Raspberry Pi).
@@ -42,4 +44,12 @@ Usually it means there is a pull request...
 | apache-php  | PHP server       | apache     |
 | kanboard    | Kanban webUI     | apache-php |
 
+## TODO
+* Add Healthcheck to other images
+  - [x] Apache
+  - [ ] DHCP
+  - [ ] Kanboard
+  - [ ] Nginx
+  - [ ] Rsync
+  - [ ] Samba
 
