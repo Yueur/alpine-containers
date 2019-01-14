@@ -1,0 +1,8 @@
+FROM 127.0.0.1:5000/dns-base:latest
+
+COPY files/named.conf.local /etc/bind/named.conf.local
+COPY files/db.test.local /etc/bind/zones/db.test.local
+
+HEALTHCHECK --interval=5m --timeout=3s --start-period=1s --retries=3 \
+  CMD host -t a ns1.test.local 127.0.0.1
+

@@ -1,0 +1,27 @@
+$TTL 604800     ; 1 week
+$ORIGIN test.local.
+@       IN SOA  ns1.test.local. admin.test.local. (
+                                2013020905 ;serial
+                                3600       ; refresh (1 hour)
+                                3000       ; retry (50 minutes)
+                                4619200    ; expire (7 weeks 4 days 11 hours 6 minutes 40 seconds)
+                                604800     ; minimum (1 week)
+                                )
+
+; NS = Name Server
+; MX = Mail eXchanger
+; A = IPv4 address
+; AAAA = IPv6 address
+; CNAME = Canonical Name (Alias)
+
+@               IN      NS      ns1.test.local.
+@               IN      NS      ns2
+@               IN      MX      10 mx1
+@               IN      MX      20 mx2
+ns1             IN      A       192.168.0.1
+ns2             IN      A       192.168.0.2
+mx1             IN      A       192.168.0.3
+mx2             IN      A       192.168.0.4
+www             IN      A       192.168.0.5
+blog            IN      CNAME   www
+

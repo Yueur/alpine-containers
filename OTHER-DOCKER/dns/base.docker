@@ -1,0 +1,26 @@
+FROM debian
+
+RUN apt-get update && \
+	apt-get -y install bind9 host && \
+	DEBIAN_FRONTEND=noninteractive apt-get purge -y --auto-remove ${build_deps} && \
+	rm -r /var/lib/apt/lists/* && \
+	mkdir /etc/bind/zones/
+
+CMD ["/usr/sbin/named", "-f"]
+
+# ----------------------------------------
+# Forget me not!
+# named-checkconf /etc/bind/named.conf
+# named-checkzone reseau.fr /etc/bind/db.reseau.fr
+
+# Get name server
+# host -t ns ns1.reseau.fr
+
+# Get address
+# host -t a ns1.reseau.fr
+# cat /etc/resolv.conf
+# /usr/sbin/named
+# nmap -sU 127.0.0.1
+#/etc/init.d/bind9 restart
+
+
